@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './AboutEvent.css';
+import '../css/AboutEvent.css';
 
 const AboutEvent = () => {
   const sectionRef = useRef(null);

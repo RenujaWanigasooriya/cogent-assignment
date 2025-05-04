@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Banner.css';
+import '../css/Banner.css';
 
 const Banner = () => {
   const [scrollPosition, setScrollPosition] = useState(0);

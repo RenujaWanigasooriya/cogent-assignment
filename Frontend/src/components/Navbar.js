@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
+import '../css/Navbar.css';
 
 const Navbar = ({ scrollPosition }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

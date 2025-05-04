@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './TopReasons.css';
+import '../css/TopReasons.css';
 // Import Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

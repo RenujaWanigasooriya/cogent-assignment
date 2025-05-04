@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Speaker.css';
+import '../css/Speaker.css';
 
 const speakersData = [
   {

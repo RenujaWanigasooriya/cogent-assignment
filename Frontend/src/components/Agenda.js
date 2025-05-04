@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Agenda.css';
+import '../css/Agenda.css';
 
 const agendaItems = [
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutFinastra.css';
+import '../css/AboutFinastra.css';
 
 const AboutFinastra = () => {
   return (
