@@ -1,0 +1,301 @@
+/* TopReasons.css - Modern dark theme with animations */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+}
+
+.top-reasons-section {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.top-reasons-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Finastra-UB-Egypt-Benefits-of-attending.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  filter: brightness(0.5);
+  animation: slowZoom 20s infinite alternate;
+  z-index: 1;
+}
+
+.top-reasons-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(20, 20, 40, 0.7) 100%);
+  z-index: 2;
+}
+
+.top-reasons-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 3;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.reasons-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards 0.4s;
+}
+
+.reasons-text h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #4EC9F5 0%, #8176FF 50%, #FF8ECF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  padding-bottom: 1.2rem;
+  text-shadow: none; /* optional: you can remove or adjust based on contrast */
+}
+
+
+.reasons-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: expandLine 1.2s ease forwards 0.8s;
+}
+
+.reasons-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.reasons-list li {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateX(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border-left: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.reasons-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(126, 87, 194, 0.1), rgba(66, 165, 245, 0.05));
+  z-index: -1;
+}
+
+.reasons-list li:nth-child(1) { 
+  animation: fadeInFromRight 0.5s ease forwards 0.6s;
+  border-left-color: #9C27B0;
+}
+.reasons-list li:nth-child(2) { 
+  animation: fadeInFromRight 0.5s ease forwards 0.8s;
+  border-left-color: #2196F3;
+}
+.reasons-list li:nth-child(3) { 
+  animation: fadeInFromRight 0.5s ease forwards 1s;
+  border-left-color: #4CAF50;
+}
+.reasons-list li:nth-child(4) { 
+  animation: fadeInFromRight 0.5s ease forwards 1.2s;
+  border-left-color: #FF9800;
+}
+.reasons-list li:nth-child(5) { 
+  animation: fadeInFromRight 0.5s ease forwards 1.4s;
+  border-left-color: #E91E63;
+}
+
+.reasons-list li:hover {
+  transform: translateX(8px) translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.reasons-list .reason-icon {
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  padding: 12px;
+}
+
+.reasons-list li:nth-child(1) .reason-icon {
+  background: linear-gradient(135deg, #9C27B0, #673AB7);
+}
+
+.reasons-list li:nth-child(2) .reason-icon {
+  background: linear-gradient(135deg, #2196F3, #03A9F4);
+}
+
+.reasons-list li:nth-child(3) .reason-icon {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+
+.reasons-list li:nth-child(4) .reason-icon {
+  background: linear-gradient(135deg, #FF9800, #FFC107);
+}
+
+.reasons-list li:nth-child(5) .reason-icon {
+  background: linear-gradient(135deg, #E91E63, #FF5722);
+}
+
+.reasons-list li .reason-text {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Icon pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.reasons-list .reason-icon.pulse {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Background zoom animation */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .reasons-text h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-reasons-container {
+    padding: 4rem 1.5rem;
+  }
+  
+  .reasons-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .reasons-text h2::after {
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    animation: expandLineCenter 1.2s ease forwards 0.8s;
+  }
+  
+  @keyframes expandLineCenter {
+    0% {
+      transform: translateX(-50%) scaleX(0);
+    }
+    100% {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}
